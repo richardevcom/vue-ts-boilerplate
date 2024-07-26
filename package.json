@@ -20,6 +20,7 @@
   ],
   "version": "1.0.1",
   "private": true,
+  "type": "module",
   "author": "richardevcom <hello@richardev.com> (https://github.com/richardevcom)",
   "scripts": {
     "dev": "vite --config vite.config.dev.ts",
