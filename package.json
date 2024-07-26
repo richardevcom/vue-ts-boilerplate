@@ -22,12 +22,13 @@
   "private": true,
   "author": "richardevcom <hello@richardev.com> (https://github.com/richardevcom)",
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check build-only",
-    "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "dev": "vite --config vite.config.dev.ts",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview --config vite.config.prod.ts",
+    "build-only": "vite build --config vite.config.prod.ts",
+    "type-check": "vue-tsc --build --force",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
   },
   "dependencies": {
     "pinia": "^2.0.28",
