@@ -23,10 +23,10 @@
   "type": "module",
   "author": "richardevcom <hello@richardev.com> (https://github.com/richardevcom)",
   "scripts": {
-    "dev": "vite --config vite.config.dev.ts",
+    "dev": "vite --config vite.config.dev.mts",
     "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview --config vite.config.prod.ts",
-    "build-only": "vite build --config vite.config.prod.ts",
+    "preview": "vite preview --config vite.config.prod.mts",
+    "build-only": "vite build --config vite.config.prod.mts",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
